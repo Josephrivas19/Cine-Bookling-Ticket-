@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GoodSeats Sign Up</title>
+
+  <!-- Font Awesome CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0d0d0d;
+      color: #fff;
+    }
+
+    .navbar {
+      background-color: #1e2a35;
+      padding: 20px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .navbar-left {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 28px;
+      color: #ffffff;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .signup-box {
+      text-align: center;
+      max-width: 350px;
+      width: 100%;
+      padding: 40px;
+      background-color: #111;
+      border-radius: 10px;
+    }
+
+    h2 {
+      margin-bottom: 30px;
+    }
+
+    input[type="text"], input[type="email"], input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+      background-color: #eee;
+      color: #000;
+    }
+
+    .signup-btn {
+      background-color: #2cb1b1;
+      color: #fff;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 10px 0;
+    }
+
+    .signup {
+      font-size: 14px;
+      margin-top: 20px;
+      color: #888;
+    }
+
+    .signup a {
+      color: #2cb1b1;
+      text-decoration: none;
+    }
+
+    .p {
+      margin: 20px 0 10px;
+      font-size: 14px;
+      color: #ccc;
+      border-bottom: 2px solid #ccc; /* Add a bottom border */
+      padding-bottom: 10px; /* Add some space between text and the line */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="navbar-left">
+      <div class="logo">GoodSeats</div>
+    </div>
+  </div>
+
+  <!-- Sign Up Form -->
+  <div class="container">
+    <div class="signup-box">
+      <h2>Sign Up</h2>
+      <form>
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <input type="password" placeholder="Password" required>
+        <input type="password" placeholder="Confirm Password" required>
+
+        <button class="signup-btn">Sign Up</button>
+      </form>
+      <div class="signup">
+        Already have an account? <a href="Login.html">Login</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GoodSeats</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0f0f0f;
+      color: white;
+    }
+
+    /* NAVIGATION */
+    .navbar {
+      background-color: #1e2a35;
+      padding: 20px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .navbar-left {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 28px;
+      color: #ffffff;
+    }
+
+    .search-container {
+      position: relative;
+    }
+
+    .search-container input {
+      padding: 12px 40px 12px 40px;
+      border-radius: 30px;
+      border: none;
+      outline: none;
+      width: 300px;
+      font-size: 16px;
+    }
+
+    .search-container::before {
+      content: '🔍';
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 16px;
+      color: #888;
+    }
+
+    .navbar-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .navbar-right a {
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+    }
+
+    .login-btn,
+    .signup-btn {
+      background-color: #41bdbd;
+      padding: 8px 16px;
+      color: white;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .login-btn:hover,
+    .signup-btn:hover {
+      background-color: #359d9d;
+    }
+
+    /* MAIN CONTENT */
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 50px;
+      padding: 20px 40px;
+    }
+
+    .section-content {
+      text-align: left;
+      max-width: 100%;
+      width: 100%;
+    }
+
+    .section-content h2 {
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+
+    .movies-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 30px;
+      margin: 20px 0;
+      padding: 20px;
+    }
+
+    .movie-card {
+      background-color: #1a1a1a;
+      border-radius: 8px;
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .movie-card:hover {
+      transform: scale(1.05);
+    }
+
+    .movie-card img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.5s ease;
+      max-width: 250px; /* Adjust this value to control the size */
+      max-height: 350px; 
+    }
+
+    .movie-card:hover img {
+      transform: scale(1.1);
+    }
+
+    .movie-card p {
+      margin: 10px 0;
+      font-size: 16px;
+    }
+
+    /* Media Queries for responsiveness */
+    @media (max-width: 768px) {
+      .movies-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 20px;
+      }
+
+      .navbar-left .logo {
+        font-size: 24px;
+      }
+
+      .navbar-right a {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .movies-grid {
+        grid-template-columns: 1fr; /* Stack movie cards in one column */
+        gap: 15px;
+      }
+
+      .search-container input {
+        width: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <div class="navbar">
+    <div class="navbar-left">
+      <div class="logo">GoodSeats</div>
+      <div class="search-container">
+        <input type="text" placeholder="Search...">
+      </div>
+    </div>
+    <div class="navbar-right">
+      <a href="#">Movies</a>
+      <a href="#">Cinema</a>
+      <a href="login.html" class="login-btn">Login</a>
+      <a href="Sign up.html" class="signup-btn">Sign Up</a>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="main-content">
+
+    <!-- NEW RELEASE SECTION -->
+    <div class="section-content">
+      <h2>New Release</h2>
+      <div class="movies-grid">
+        <div class="movie-card">
+          <img src="wicked 23.jpg" alt="Wicked">
+          <p>Wicked</p>
+        </div>
+        <div class="movie-card">
+          <img src="Mufasa.jpg" alt="Mufasa: The Lion King">
+          <p>Mufasa: The Lion King</p>
+        </div>
+        <div class="movie-card">
+          <img src="moana 2 (2).jpg" alt="Moana 2">
+          <p>Moana 2</p>
+        </div>
+        <div class="movie-card">
+          <img src="hello love again.jpg" alt="Hello, Love, Again">
+          <p>Hello, Love, Again</p>
+        </div>
+        <div class="movie-card">
+          <img src="A Minecraft.jpg" alt="A Minecraft Movie">
+          <p>A Minecraft Movie</p>
+        </div>
+        <div class="movie-card">
+          <img src="sneaks.webp" alt="Sneaks">
+          <p>Sneaks</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- COMING SOON SECTION -->
+    <div class="section-content">
+      <h2>Coming Soon</h2>
+      
+      <div class="movies-grid">
+        <div class="movie-card">
+          <img src="How to Train Your Dragon.jpg" alt="How to Train Your Dragon">
+          <p>How to Train Your Dragon</p>
+        </div>
+        <div class="movie-card">
+          <img src="Thunderbolts.jpg" alt="Thunderbolts">
+          <p>Thunderbolts</p>
+        </div>
+        <div class="movie-card">
+          <img src="Megan.jpg" alt="M3gan 2.0">
+          <p>M3gan 2.0</p>
+        </div>
+        <div class="movie-card">
+          <img src="Jurassic.jpg" alt="Jurassic World: Rebirth">
+          <p>Jurassic World: Rebirth</p>
+        </div>
+        <div class="movie-card">
+          <img src="Lilo.jpg" alt="Lilo & Stitch">
+          <p>Lilo & Stitch</p>
+        </div>
+        <div class="movie-card">
+          <img src="Captain America.jpg" alt="Captain America">
+          <p>Captain America</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
